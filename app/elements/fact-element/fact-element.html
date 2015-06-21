@@ -1,0 +1,37 @@
+<dom-module id="fact-element">
+
+  <!-- scoped CSS for this element -->
+  <style>
+    div {
+      display: inline-block;
+      background-color: #ccc;
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .my-number{
+      font-size: 30pt;
+      font-weight: 800;
+    }
+  </style>
+
+  <template>
+    <div>
+      <!-- any children are rendered here -->
+      <br/>
+      <span class="my-number">{{number}}</span>
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "fact-element",
+      properties: {
+        number: {
+          type: String
+        }
+      }
+    });
+  </script>
+
+</dom-module>
